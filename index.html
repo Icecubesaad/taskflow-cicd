@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskFlow – Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>✅ TaskFlow</h1>
+    <span>Task Management Made Simple</span>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="add-task.html">➕ Add Task</a>
+    <a href="task-list.html">📋 Task List</a>
+    <a href="task-detail.html">🔍 Task Detail</a>
+    <a href="about.html">ℹ️ About</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Welcome to TaskFlow 👋</h2>
+        <p>TaskFlow helps you manage your tasks efficiently. Use the navigation above to add tasks, view your task list, check task details, or learn more about the application.</p>
+    </div>
+
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="number">12</div>
+            <div class="label">Total Tasks</div>
+        </div>
+        <div class="summary-card">
+            <div class="number" style="color:#e74c3c;">7</div>
+            <div class="label">Pending Tasks</div>
+        </div>
+        <div class="summary-card">
+            <div class="number" style="color:#27ae60;">5</div>
+            <div class="label">Completed Tasks</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Quick Navigation</h2>
+        <a href="add-task.html" class="btn btn-primary" style="margin-right:10px;">➕ Add a New Task</a>
+        <a href="task-list.html" class="btn btn-warning" style="margin-right:10px;">📋 View All Tasks</a>
+        <a href="task-detail.html" class="btn btn-success">🔍 Task Details</a>
+    </div>
+
+    <div class="card">
+        <h2>Recent Activity</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Design homepage mockup</td>
+                    <td>2026-06-10</td>
+                    <td><span class="badge badge-high">High</span></td>
+                    <td><span class="badge badge-completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Set up CI/CD pipeline</td>
+                    <td>2026-06-12</td>
+                    <td><span class="badge badge-high">High</span></td>
+                    <td><span class="badge badge-pending">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>Write unit tests</td>
+                    <td>2026-06-15</td>
+                    <td><span class="badge badge-medium">Medium</span></td>
+                    <td><span class="badge badge-pending">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    <p>TaskFlow &copy; 2026 – DevOps Fundamentals Spring 2026</p>
+</footer>
+
+</body>
+</html>
