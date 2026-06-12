@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TaskFlow – Add Task</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <h1>✅ TaskFlow</h1>
+    <span>Task Management Made Simple</span>
+</header>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="add-task.html">➕ Add Task</a>
+    <a href="task-list.html">📋 Task List</a>
+    <a href="task-detail.html">🔍 Task Detail</a>
+    <a href="about.html">ℹ️ About</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>➕ Add a New Task</h2>
+        <p style="margin-bottom:20px; color:#666;">Fill in the details below to create a new task in TaskFlow.</p>
+
+        <form onsubmit="handleSubmit(event)">
+
+            <label for="title">Task Title <span style="color:red;">*</span></label>
+            <input type="text" id="title" name="title" placeholder="e.g. Design homepage mockup" required />
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Describe the task in detail..."></textarea>
+
+            <label for="due-date">Due Date <span style="color:red;">*</span></label>
+            <input type="date" id="due-date" name="due-date" required />
+
+            <label for="priority">Priority <span style="color:red;">*</span></label>
+            <select id="priority" name="priority" required>
+                <option value="" disabled selected>-- Select Priority --</option>
+                <option value="High">🔴 High</option>
+                <option value="Medium">🟡 Medium</option>
+                <option value="Low">🟢 Low</option>
+            </select>
+
+            <button type="submit" class="btn btn-primary">✅ Add Task</button>
+            <a href="index.html" class="btn btn-warning" style="margin-left:10px;">Cancel</a>
+
+        </form>
+
+        <div id="success-msg" style="display:none; margin-top:20px; padding:14px; background:#d4edda; border-radius:6px; color:#155724; font-weight:600;">
+            ✅ Task added successfully! <a href="task-list.html">View Task List →</a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>TaskFlow &copy; 2026 – DevOps Fundamentals Spring 2026</p>
+</footer>
+
+<script>
+    function handleSubmit(e) {
+        e.preventDefault();
+        document.getElementById('success-msg').style.display = 'block';
+        e.target.reset();
+    }
+</script>
+
+</body>
+</html>
